@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <title>Clientes</title>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Lista de clientes</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th scope="col">ID de empleado</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellidos</th>
+    <th scope="col">Fecha Nacimiento</th>
+    <th scope="col">DNI</th>
+    <th scope="col">Eliminar</th>
+  </tr>
+  </thead>
+  <tbody>
+  <th:block th:each="cliente : ${customers}">
+    <tr>
+      <td scope="row" th:text="${cliente.customerID}" />
+      <td scope="row" th:text="${cliente.name}" />
+      <td scope="row" th:text="${cliente.surname}" />
+      <td scope="row" th:text="${cliente.birthDate}" />
+      <td scope="row" th:text="${cliente.dni}" />
+    </tr>
+  </th:block>
+  </tbody>
+</table>
+<form action="/">
+  <button type="submit" class="btn btn-primary btn-lg">Pagina
+    inicial</button>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Clientes</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Buscar cliente por nombre</h1>
+
+<form method="post" th:action="@{/getCustomersByName/find}">
+    <table>
+        <tr>
+            <td><label>Nombre: </label></td>
+            <td><input type="text" class="form-control" th:name="name" /></td>
+        </tr>
+        <tr>
+            <td><button type="submit" class="btn btn-primary btn-lg">Buscar</button></td>
+        </tr>
+    </table>
+</form>
+
+<form action="/">
+    <button type="submit" class="btn btn-primary btn-lg">Pagina
+        principal</button>
+</form>
+<br />
+
+
+</body>
+
+</html>
